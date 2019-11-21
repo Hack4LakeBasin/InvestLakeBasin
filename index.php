@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['login_user'])){
+die("Present");
+}
+else{
+    header('location: ./signin.php');
+}
+?>
 <!DOCTYPE html>
 <html>
 

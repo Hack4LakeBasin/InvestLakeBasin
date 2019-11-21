@@ -40,6 +40,7 @@
                 class="btn btn-primary btn-block" type="button" style="margin-top: 20px;">Login</button>
         </form>
     </div>
+    <div class="container text-center" style="margin-top: 20px;"><small class="text-center">Don&#39;t have an account? <a href="signup.php">Sign up here</a></small></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
