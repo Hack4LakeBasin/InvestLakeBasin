@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['login_user'])){
-die("Present");
+
 }
 else{
     header('location: ./signin.php');
@@ -13,115 +13,92 @@ else{
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>InvestLakeBasin</title>
-    <meta name="theme-color" content="rgb(35,198,208)">
-    <meta name="twitter:description" content="Invest Lake Basin is a platform to link invetees to investors.">
-    <meta name="twitter:image" content="assets/img/invest_lakebasin.png">
-    <meta name="description" content="Invest Lake Basin is a platform to link invetees to investors.">
-    <meta name="" content="">
-    <meta property="og:image" content="assets/img/invest_lakebasin.png">
+    <title>Home - InvestLakeBasin</title>
+    <meta name="twitter:description" content="InvestLakeBasin is a platform for connecting Small Scale Farmers as Investees to investors based on their portfolio created.">
     <meta name="twitter:title" content="InvestLakeBasin">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="assets/img/invest_lakebasin.png">
+    <meta name="description" content="InvestLakeBasin is a platform for connecting Investees to investors based on their portfolio created.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:image" content="assets/img/invest_lakebasin.png">
     <link rel="icon" type="image/png" sizes="89x100" href="assets/img/invest_lakebasin_favicon.png">
     <link rel="icon" type="image/png" sizes="89x100" href="assets/img/invest_lakebasin_favicon.png">
     <link rel="icon" type="image/png" sizes="89x100" href="assets/img/invest_lakebasin_favicon.png">
     <link rel="icon" type="image/png" sizes="89x100" href="assets/img/invest_lakebasin_favicon.png">
-    <link rel="icon" type="image/png" sizes="200x200" href="assets/img/invest_lakebasin.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="89x100" href="assets/img/invest_lakebasin_favicon.png">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md fixed-top bg-dark" style="background-color: #070707;color: rgb(230,233,237);">
-        <div class="container-fluid"><a class="navbar-brand" href="#" style="color: rgba(255,255,255,0.9);">InvestLakeBasin</a>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item" role="presentation"><a class="nav-link active text-white" href="#">First Item</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link text-white" href="#">Second Item</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link text-white" href="#">Third Item</a></li>
+<nav class="navbar navbar-dark navbar-expand-md fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="#">InvestLakeBasin</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="../index.html#how-it-works">About&nbsp;</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="Potential.php">Potential Investors</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="../investors">Settings</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div>
         <div class="container" style="margin-top: 90px;">
-            <h1>2019</h1>
-            <div class="row">
-                <div class="col-6 col-md-6">
-                    <div class="card">
+            <h1><?php echo date('Y');?></h1>
+            <div id="fetch-data">
+                <div class="card col-sm-3">
                         <div class="card-body">
-                            <h4 class="card-title">Month 4</h4>
-                            <h6 class="text-muted card-subtitle mb-2">11/11/2019</h6>
-                            <p class="card-text">Incomplete</p><a class="card-link" href="#">Edit</a><a class="card-link" href="#">View</a></div>
+                            <h4 class="card-title"><?php echo date('M Y');?></h4>
+                            <h6 class="text-muted card-subtitle mb-2">No data could be found!</h6>
+                            <p class="card-text">Tap add to add information about this month</p>
+                            <a class="card-link" href="#"  data-toggle="modal" data-target="#myModal">Add</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Month 3</h4>
-                            <h6 class="text-muted card-subtitle mb-2">11/10/2019</h6>
-                            <p class="card-text">Complete</p><a class="card-link" href="#">View</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Month 4</h4>
-                            <h6 class="text-muted card-subtitle mb-2">11/11/2019</h6>
-                            <p class="card-text">Incomplete</p><a class="card-link" href="#">View</a></div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Month 3</h4>
-                            <h6 class="text-muted card-subtitle mb-2">11/10/2019</h6>
-                            <p class="card-text">Complete</p><a class="card-link" href="#">View</a></div>
-                    </div>
-                </div>
-            </div>
-            <h1 style="margin-top: 10px;">2018</h1>
-            <div class="row">
-                <div class="col-6 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Month 12</h4>
-                            <h6 class="text-muted card-subtitle mb-2">11/11/2019</h6>
-                            <p class="card-text">Complete</p><a class="card-link" href="#">View</a></div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Month 11</h4>
-                            <h6 class="text-muted card-subtitle mb-2">11/10/2019</h6>
-                            <p class="card-text">Complete</p><a class="card-link" href="#">View</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Month 10</h4>
-                            <h6 class="text-muted card-subtitle mb-2">11/11/2019</h6>
-                            <p class="card-text">Incomplete</p><a class="card-link" href="#">View</a></div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Month 9</h4>
-                            <h6 class="text-muted card-subtitle mb-2">11/10/2019</h6>
-                            <p class="card-text">Complete</p><a class="card-link" href="#">View</a></div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+    <!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+      <h2 class="text-center modal-title">Monthly Report</h2>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+      <div class="container" style="">
+        
+        <form>
+            <label>Invested Amount:</label>
+            <input class="form-control" type="text">
+            <label>Returned Amount</label>
+            <input class="form-control" type="text">
+            <label>Expenses:</label>
+            <input class="form-control" type="text">
+            <label>Profit/Loss:</label>
+            <input class="form-control" type="text">
+            <label>Evidence:</label><br/>
+            <input type="file"><input type="file">
+            <input type="file"><input type="file">
+            <button class="btn btn-primary btn-block" type="button" style="margin-top: 20px;">Upload</button></form>
+    </div>
+      </div>
+
+    </div>
+  </div>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</div>
 </body>
 
 </html>
