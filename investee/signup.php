@@ -40,7 +40,15 @@
     </nav>
     <div class="container" style="margin-top: 100px;">
         <h1 class="text-center">Sign up</h1>
-        <form action="register_investee.php" method="post" name="form1"><label>Full Name</label><input class="form-control"
+    <div class="text-left">
+        <ul class="nav nav-tabs nav-justified text-center">
+            <li class="nav-item"><a role="tab" data-toggle="tab" class="nav-link active" href="#tab-1">Farmer</a></li>
+            <li class="nav-item"><a role="tab" data-toggle="tab" class="nav-link" href="#tab-2">Investor</a></li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="tab-1">
+                <br>
+                <form action="register_investee.php" method="post" name="form1"><label>Full Name</label><input class="form-control"
                 type="text"
                 placeholder="Full Name"><label>Email</label><input class="form-control" type="text"
                 placeholder="Email"><label>Phone</label><input class="form-control" type="text"
@@ -51,6 +59,22 @@
                         type="text" placeholder="Retype password"><button  name="Submit" value="Add"
                         class="btn btn-primary btn-block" type="submit" style="margin-top: 20px;">Sign Up</button>
                     </form>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab-2">
+                <br>
+                <form action="register_investee.php" method="post" name="form1"><label>Full Name</label><input class="form-control"
+                type="text"
+                placeholder="Full Name"><label>Email</label><input class="form-control" type="text"
+                placeholder="Email"><label>Phone</label><input class="form-control" type="text"
+                placeholder="Phone"><label>Organization Name</label>
+            <input
+                class="form-control" type="text" placeholder="Organization name"><label>National ID Number</label><input class="form-control" type="text" placeholder="National ID Number"><label>KRA pin</label><input class="form-control" type="text" placeholder="KRA Pin"><label>Password:</label><input class="form-control"
+                    type="text" placeholder="Password"><label>Retype Password:</label><input class="form-control"
+                        type="text" placeholder="Retype password"><button  name="Submit" value="Add"
+                        class="btn btn-primary btn-block" type="submit" style="margin-top: 20px;">Sign Up</button>
+                    </form>
+            </div>
+        </div>
     </div>
     <div class="container text-center" style="margin-top: 20px; margin-bottom:20px;"><small class="text-center">Already have an account? <a href="signin.php">Sign in here</a></small></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

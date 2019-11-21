@@ -53,12 +53,20 @@
                 <small>Pata ufadhili na wawekezaji uwezo kwa kuwa sehemu yetu.</small>
                 <hr>
                 <br><br>
-            <form><label>Email, Phone Number or Username:</label><input type="text" class="form-control" placeholder="Email, Phone Number or Username" /><label style="margin-top: 10px;">Password:</label><input type="text" class="form-control" placeholder="Password"
-        /><button class="btn btn-primary btn-block" type="button" style="margin-top: 20px;">Login as farmer</button></form>
+            <form>
+                <label>Email, Phone Number or Username:</label>
+                <input type="text" class="form-control" name="username-farmer" required placeholder="Email, Phone Number or Username" />
+                <label style="margin-top: 10px;">Password:</label>
+                <input type="password" class="form-control" name="password-farmer" placeholder="Password" required/>
+                <button class="btn btn-primary btn-block" type="button" style="margin-top: 20px;">Login as farmer</button></form>
             </div>
             <div role="tabpanel" class="tab-pane" id="tab-2">
                 <br>
-            <form><label>Email, Phone Number or Username:</label><input class="form-control" type="text" placeholder="Email, Phone Number or Username"><label style="margin-top: 10px;">Password:</label><input class="form-control" type="text" placeholder="Password">
+            <form>
+                <label>Email, Phone Number or Username:</label>
+                <input class="form-control" type="text" name="username-investor" required placeholder="Email, Phone Number or Username">
+                <label style="margin-top: 10px;">Password:</label>
+                <input class="form-control" type="password" name="password-investor" required placeholder="Password">
             <button
                 class="btn btn-primary btn-block" type="button" style="margin-top: 20px;">Login as investor</button>
         </form>
