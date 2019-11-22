@@ -70,7 +70,7 @@
             </div>
             <div role="tabpanel" class="tab-pane" id="tab-2">
                 <br>
-            <form action="login.php" method="post">
+            <form action="../investors/starter.html" method="post">
                 <label>Email, Phone Number or Username:</label>
                 <input class="form-control" type="text" name="username-investor" required placeholder="Email, Phone Number or Username">
                 <label style="margin-top: 10px;">Password:</label>
