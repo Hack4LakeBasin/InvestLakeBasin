@@ -48,30 +48,47 @@
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="tab-1">
                 <br>
-                <form action="register_investee.php" method="post" name="form1"><label>Full Name</label><input class="form-control"
-                type="text"
-                placeholder="Full Name"><label>Email</label><input class="form-control" type="text"
-                placeholder="Email"><label>Phone</label><input class="form-control" type="text"
-                placeholder="Phone"><label>Business Name</label>
-            <input
-                class="form-control" type="text" placeholder="Business Name:"><label>National ID Number</label><input class="form-control" type="text" placeholder="National ID Number"><label>KRA pin</label><input class="form-control" type="text" placeholder="KRA Pin"><label>Password:</label><input class="form-control"
-                    type="text" placeholder="Password"><label>Retype Password:</label><input class="form-control"
-                        type="text" placeholder="Retype password"><button  name="Submit" value="Add"
+                <form action="register_investee.php" method="post" name="form1">
+                    <label>Full Name</label>
+                    <input class="form-control" type="text" placeholder="Full Name" required>
+                    <label>Email</label>
+                    <input class="form-control" type="text" placeholder="Email" required>
+                    <label>Phone</label>
+                    <input class="form-control" type="text" placeholder="Phone" required>
+                    <label>Business Name</label>
+            <input class="form-control" type="text" placeholder="Business Name:" required>
+                    <label>National ID Number</label>
+                    <input class="form-control" type="text" placeholder="National ID Number" required>
+                    <label>KRA pin</label>
+                    <input class="form-control" type="text" placeholder="KRA Pin" required>
+                    <label>Password:</label>
+                    <input class="form-control" type="password" placeholder="Password" required>
+                    <label>Retype Password:</label>
+                    <input class="form-control" type="password" placeholder="Retype password" required>
+                    <button  name="sub_investee" value="Add"
                         class="btn btn-primary btn-block" type="submit" style="margin-top: 20px;">Sign Up</button>
                     </form>
             </div>
             <div role="tabpanel" class="tab-pane" id="tab-2">
                 <br>
-                <form action="register_investee.php" method="post" name="form1"><label>Full Name</label><input class="form-control"
-                type="text"
-                placeholder="Full Name"><label>Email</label><input class="form-control" type="text"
-                placeholder="Email"><label>Phone</label><input class="form-control" type="text"
-                placeholder="Phone"><label>Organization Name</label>
-            <input
-                class="form-control" type="text" placeholder="Organization name"><label>National ID Number</label><input class="form-control" type="text" placeholder="National ID Number"><label>KRA pin</label><input class="form-control" type="text" placeholder="KRA Pin"><label>Password:</label><input class="form-control"
-                    type="text" placeholder="Password"><label>Retype Password:</label><input class="form-control"
-                        type="text" placeholder="Retype password"><button  name="Submit" value="Add"
-                        class="btn btn-primary btn-block" type="submit" style="margin-top: 20px;">Sign Up</button>
+                <form action="register_investee.php" method="post" name="form1">
+                    <label>Full Name</label>
+                    <input class="form-control" type="text" placeholder="Full Name" required>
+                    <label>Email</label>
+                    <input class="form-control" type="text" placeholder="Email" required>
+                    <label>Phone</label>
+                    <input class="form-control" type="text" placeholder="Phone" required>
+                    <label>Organization Name</label>
+            <input class="form-control" type="text" placeholder="Organization name" required>
+                    <label>National ID Number</label>
+                    <input class="form-control" type="text" placeholder="National ID Number" required>
+                    <label>KRA pin</label>
+                    <input class="form-control" type="text" placeholder="KRA Pin" required>
+                    <label>Password:</label>
+                    <input class="form-control" type="password" placeholder="Password" required>
+                    <label>Retype Password:</label>
+                    <input class="form-control" type="password" placeholder="Retype password" required>
+                    <button  name="sub_investor" value="Add" class="btn btn-primary btn-block" type="submit" style="margin-top: 20px;">Sign Up</button>
                     </form>
             </div>
         </div>

@@ -39,6 +39,14 @@
         </div>
     </nav>
     <div class="container" style="margin-top: 100px;">
+        <?php
+        if(isset($_GET['message'])){
+            if($_GET['message']=='success'){
+                echo "<div class='alert alert-success'>Successfully signed up. Please log in!</div>";
+            }
+        }
+
+        ?>
         <h1 class="text-center">Sign in</h1>
     <div class="text-left">
         <ul class="nav nav-tabs nav-justified text-center">
@@ -53,22 +61,22 @@
                 <small>Pata ufadhili na wawekezaji uwezo kwa kuwa sehemu yetu.</small>
                 <hr>
                 <br><br>
-            <form>
+            <form action="login.php" method="post">
                 <label>Email, Phone Number or Username:</label>
                 <input type="text" class="form-control" name="username-farmer" required placeholder="Email, Phone Number or Username" />
                 <label style="margin-top: 10px;">Password:</label>
                 <input type="password" class="form-control" name="password-farmer" placeholder="Password" required/>
-                <button class="btn btn-primary btn-block" type="button" style="margin-top: 20px;">Login as farmer</button></form>
+                <button class="btn btn-primary btn-block" type="submit" style="margin-top: 20px;">Login as farmer</button></form>
             </div>
             <div role="tabpanel" class="tab-pane" id="tab-2">
                 <br>
-            <form>
+            <form action="login.php" method="post">
                 <label>Email, Phone Number or Username:</label>
                 <input class="form-control" type="text" name="username-investor" required placeholder="Email, Phone Number or Username">
                 <label style="margin-top: 10px;">Password:</label>
                 <input class="form-control" type="password" name="password-investor" required placeholder="Password">
             <button
-                class="btn btn-primary btn-block" type="button" style="margin-top: 20px;">Login as investor</button>
+                class="btn btn-primary btn-block" type="submit" style="margin-top: 20px;">Login as investor</button>
         </form>
             </div>
         </div>

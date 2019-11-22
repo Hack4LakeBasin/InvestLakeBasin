@@ -4,8 +4,9 @@ if(isset($_SESSION['login_user'])){
 
 }
 else{
-    //header('location: ./signin.php');
+    header('location: ./signin.php');
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,6 +50,14 @@ else{
     </nav>
     <div>
         <div class="container" style="margin-top: 90px;">
+            <?php
+            if(isset($_GET['message'])){
+                if($_GET['message']=='success'){
+                    echo "<div class='alert alert-success'>Successfully Logged in! Welcome!</div>";
+                }
+            }
+
+            ?>
             <h1><?php echo date('Y');?></h1>
             <div id="fetch-data">
                 <div class="card col-sm-3">

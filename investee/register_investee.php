@@ -1,9 +1,9 @@
 <?php
 //including the database connection file
-include_once("connect.php");
+//include_once("connect.php");
 
-if(isset($_POST['submit'])) {	
-	$full_name = mysqli_real_escape_string($mysqli, $_POST['full_name']);
+if(isset($_POST['sub_investee'])) {
+	/*$full_name = mysqli_real_escape_string($mysqli, $_POST['full_name']);
 	$email = mysqli_real_escape_string($mysqli, $_POST['email']);
 	$phone = mysqli_real_escape_string($mysqli, $_POST['phone']);
 	$business_name = mysqli_real_escape_string($mysqli, $_POST['business_name']);
@@ -54,6 +54,11 @@ if(isset($_POST['submit'])) {
 
 		//display success message
 		echo "<font color='green'>registration successful.";
-	}
+	}*/
+	//$_SESSION['login_user'] = 'Test';
+	header("location: signin.php?message=success");
+}
+if(isset($_POST['sub_investor'])) {
+	header("location: signin.php?message=success");
 }
 ?>

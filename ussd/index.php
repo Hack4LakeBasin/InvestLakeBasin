@@ -35,10 +35,14 @@ if (isset($text)) {
         $data=array(
             'phonenumber'=>$phonenumber,
             'fullname' =>$level[0],
-            'electoral_ward' => $level[1],
-            'national_id'=>$level[2]
+            'id_number' => $level[1],
+            'kra_pin' => $level[2],
+            'nearest_city'=>$level[3],
+            'farm_name'=>$level[4],
+            'this_month_inv'=>$level[5],
+            'this_months_profit'=>$level[6]
         );
-        $response="END Thank you ".$level[0]." for registering.\nWe will keep you updated";
+        $response="END Thank you ".$level[0]." for registering for InvestLakeBasin.\nWe will be matched with an investor once you complete 11 of 12 monthly updates.";
     }
     header('Content-type: text/plain');
     echo $response;
