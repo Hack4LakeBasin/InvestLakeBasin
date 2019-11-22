@@ -31,7 +31,7 @@
                 id="navbarNav">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="../index.html#how-it-works">About&nbsp;</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="../index.html#how-it-works">How it works&nbsp;</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="signin.php">Get funding</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="../investors">Start Investing</a></li>
                 </ul>

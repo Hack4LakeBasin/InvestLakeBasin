@@ -4,7 +4,7 @@ if(isset($_SESSION['login_user'])){
 
 }
 else{
-    header('location: ./signin.php');
+    //header('location: ./signin.php');
 }
 ?>
 <!DOCTYPE html>
@@ -77,19 +77,20 @@ else{
       <div class="modal-body">
       <div class="container" style="">
         
-        <form>
+        <form method="post" enctype="multipart/form-data" action="">
             <label>Invested Amount:</label>
-            <input class="form-control" type="text">
+            <input class="form-control" type="text" name="invested_amount" placeholder="Invested Amount" required>
             <label>Returned Amount</label>
-            <input class="form-control" type="text">
+            <input class="form-control" type="text" name="returned amount" placeholder="Returned Amount" required>
             <label>Expenses:</label>
-            <input class="form-control" type="text">
+            <input class="form-control" type="text" name="expenses" placeholder="Expenses" required>
             <label>Profit/Loss:</label>
-            <input class="form-control" type="text">
+            <input class="form-control" type="text" name="profit-loss" placeholder="Profit/Loss" required>
             <label>Evidence:</label><br/>
-            <input type="file"><input type="file">
-            <input type="file"><input type="file">
-            <button class="btn btn-primary btn-block" type="button" style="margin-top: 20px;">Upload</button></form>
+            <small>Please upload atleast one Image:</small><br>
+            <input type="file" name="evidence_1" accept="image/*" required><input type="file" name="evidence_2" accept="image/*">
+            <input type="file" name="evidence_3" accept="image/*"><input type="file" name="evidence_4" accept="image/*">
+            <button class="btn btn-primary btn-block" type="submit" style="margin-top: 20px;" name="upload_button">Upload</button></form>
     </div>
       </div>
 
@@ -98,7 +99,11 @@ else{
 </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-</div>
+    <script>
+        const addEvidence=(id,)=>{
+
+        }
+    </script>
 </body>
 
 </html>

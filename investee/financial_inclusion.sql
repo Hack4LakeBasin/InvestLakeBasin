@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2019 at 04:36 PM
--- Server version: 10.1.39-MariaDB
--- PHP Version: 7.2.18
+-- Generation Time: Nov 22, 2019 at 01:14 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `financial_inclusion`
 --
+CREATE DATABASE IF NOT EXISTS `financial_inclusion` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `financial_inclusion`;
 
 -- --------------------------------------------------------
 
@@ -109,10 +111,10 @@ CREATE TABLE `investor_details` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Login`
+-- Table structure for table `login`
 --
 
-CREATE TABLE `Login` (
+CREATE TABLE `login` (
   `email_address` varchar(200) NOT NULL,
   `password` varchar(15) NOT NULL,
   `log_id` int(8) NOT NULL,
@@ -120,10 +122,10 @@ CREATE TABLE `Login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `Login`
+-- Dumping data for table `login`
 --
 
-INSERT INTO `Login` (`email_address`, `password`, `log_id`, `account_type`) VALUES
+INSERT INTO `login` (`email_address`, `password`, `log_id`, `account_type`) VALUES
 ('njogu@gmail.com', '', 2, '');
 
 -- --------------------------------------------------------
@@ -133,11 +135,16 @@ INSERT INTO `Login` (`email_address`, `password`, `log_id`, `account_type`) VALU
 --
 
 CREATE TABLE `records` (
+  `records_id` int(11) NOT NULL,
   `intial_input` bigint(20) NOT NULL,
   `output` int(20) NOT NULL,
   `profit/loss` int(20) NOT NULL,
-  `records_id` int(11) NOT NULL,
-  `email_address` varchar(200) NOT NULL
+  `email_address` varchar(200) NOT NULL,
+  `evidence_1` varchar(100) NOT NULL,
+  `evidence_2` varchar(100) NOT NULL,
+  `evidence_3` varchar(100) NOT NULL,
+  `evidence_4` varchar(100) NOT NULL,
+  `date_created` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -178,9 +185,9 @@ ALTER TABLE `investor_details`
   ADD PRIMARY KEY (`email_address`);
 
 --
--- Indexes for table `Login`
+-- Indexes for table `login`
 --
-ALTER TABLE `Login`
+ALTER TABLE `login`
   ADD PRIMARY KEY (`log_id`),
   ADD KEY `fk2` (`email_address`);
 
@@ -214,9 +221,9 @@ ALTER TABLE `interested_investors`
   MODIFY `interested_investors_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `Login`
+-- AUTO_INCREMENT for table `login`
 --
-ALTER TABLE `Login`
+ALTER TABLE `login`
   MODIFY `log_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
@@ -248,9 +255,9 @@ ALTER TABLE `interested_investors`
   ADD CONSTRAINT `Foreign_key` FOREIGN KEY (`email_address`) REFERENCES `details` (`email_address`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `Login`
+-- Constraints for table `login`
 --
-ALTER TABLE `Login`
+ALTER TABLE `login`
   ADD CONSTRAINT `fk2` FOREIGN KEY (`email_address`) REFERENCES `details` (`email_address`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
